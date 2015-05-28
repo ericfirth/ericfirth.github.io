@@ -1,0 +1,147 @@
+html, ul, li, h1, div, header, footer, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  text-decoration: inherit;
+  background: transparent;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.group:after {
+  content="";
+  display: block;
+  clear: both;
+}
+
+.snake-game {
+  width: 920px;
+  height: 920px;
+  margin: auto;
+  position: relative;
+}
+
+.game-board {
+  width: 600px;
+  height:600px;
+  float: left;
+}
+
+.snake-square {
+  display: block;
+  float: left;
+  height: 30px;
+  width: 30px;
+  background: url("../images/grass.svg");
+  margin: 0;
+}
+
+.snake.S, .snake.N {
+  background: url("../images/n-s.svg");
+}
+
+
+.snake.E, .snake.W {
+  background: url("../images/e-w.svg");
+}
+
+.head-N {
+  background: url("../images/head-n.svg")
+}
+
+.head-S {
+  background: url("../images/head-s.svg")
+}
+
+.head-E {
+  background: url("../images/head-w.svg")
+}
+
+.head-W {
+  background: url("../images/head-e.svg")
+}
+
+.tail-N {
+  background: url("../images/tail-n.svg")
+}
+
+.tail-S {
+  background: url("../images/tail-s.svg")
+}
+
+.tail-E {
+  background: url("../images/tail-w.svg")
+}
+
+.tail-W {
+  background: url("../images/tail-e.svg")
+}
+
+
+
+.wall {
+  background: url("../images/wall.svg");
+}
+
+/*.head {
+  back
+}*/
+
+.apple {
+  background: url("../images/apple.svg");
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  background: yellow;
+  width: 600px;
+  height: 600px;
+  left: 120px;
+}
+
+
+.overlay.pause {
+  display: block;
+  background: url("../images/pause-screen.png");
+}
+
+.overlay.game-over {
+  display: block;
+  background: url("../images/over-screen.png");
+}
+
+header, footer {
+  display: block;
+  width: 120px;
+  float: left;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  position: relative;
+}
+
+.apple-count {
+  font-family: sans-serif;
+  font-size: 60px;
+  left: 28px;
+  position: absolute;
+  top: 267px;
+}

@@ -1,1 +1,37 @@
-Hello World
+<html>
+  <head>
+    <title>Snake!</title>
+    <link rel="stylesheet" type="text/css" href="./css/snake.css">
+  </head>
+  <body>
+
+    <main class="snake-game group">
+      <header>
+        <img src="./images/banner.svg" alt="banner" />
+      </header>
+
+      <div class="overlay"></div>
+      <div class="game-board"></div>
+
+      <footer>
+        <span class="apple-count"></span>
+        <img src="./images/controls.svg" alt="controls" />
+      </footer>
+
+    </main>
+
+    <script src="./js/jquery-2.1.1.js"></script>
+    <!-- Whackjobs at GithubPages don't understand symlinks... -->
+    <script src="./js/snake.js"></script>
+    <script src="./js/underscore.js"></script>
+    <script src="./js/snake-view.js"></script>
+
+    <script>
+      var $el = $(".snake-game");
+      var View = new window.Snake.View($el);
+
+
+    </script>
+
+  </body>
+</html>
