@@ -28,6 +28,10 @@
   View.prototype.step = function() {
     this.gamePlay = setInterval(function() {
       if (!this.board.gameOver) {
+          if (this.new_dir) {
+            this.board.snake.turn(this.new_dir);
+            this.new_dir = null;
+          }
         this.board.snake.move()
         this.update();
       } else {
@@ -38,13 +42,13 @@
 
   View.prototype.handleKeyEvent = function(event) {
     if (event.keyCode === 38) {
-      this.board.snake.turn("N");
+      this.new_dir = "N"
     } else if (event.keyCode === 37) {
-      this.board.snake.turn("E");
+      this.new_dir = "E"
     } else if (event.keyCode === 40) {
-      this.board.snake.turn("S");
+      this.new_dir = "S"
     } else if (event.keyCode === 39) {
-      this.board.snake.turn("W");
+      this.new_dir = "W"
     } else if (event.keyCode === 32)
       this.togglePause();
   };
@@ -67,9 +71,9 @@
       var liNum = (segments[i].x * this.board.dimX) + (segments[i].y)
       var $li = $("li").eq(liNum)
       if (i === 0) {
-        $li.addClass("head-" + segments[i].dir)
+        $li.addClass("snake head-" + segments[i].dir)
       } else if (i === segments.length - 1) {
-        $li.addClass("tail-" + segments[i-1].dir)
+        $li.addClass("snake tail-" + segments[i-1].dir)
       } else {
         $li.addClass("snake " + segments[i].dir)
       }

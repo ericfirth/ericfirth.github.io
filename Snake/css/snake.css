@@ -48,45 +48,51 @@ ul {
   margin: 0;
 }
 
-.snake.S, .snake.N {
-  background: url("../images/n-s.svg");
+.snake {
+  background: url("../images/snake-sprite-sheet.svg");
+  background-size: 30px 300px;
+  background-repeat: no-repeat;
+}
+
+.S, .N {
+  background-position: 0 0;
 }
 
 
-.snake.E, .snake.W {
-  background: url("../images/e-w.svg");
+.E, .W {
+  background-position: 0 -30px;
 }
 
 .head-N {
-  background: url("../images/head-n.svg")
+  background-position: 0 -90px;
 }
 
 .head-S {
-  background: url("../images/head-s.svg")
+  background-position: 0 -120px;
 }
 
 .head-E {
-  background: url("../images/head-w.svg")
+  background-position: 0 -150px;
 }
 
 .head-W {
-  background: url("../images/head-e.svg")
+  background-position: 0 -60px;
 }
 
 .tail-N {
-  background: url("../images/tail-n.svg")
+  background-position: 0 -210px;
 }
 
 .tail-S {
-  background: url("../images/tail-s.svg")
+  background-position: 0 -240px;
 }
 
 .tail-E {
-  background: url("../images/tail-w.svg")
+  background-position: 0 -270px;
 }
 
 .tail-W {
-  background: url("../images/tail-e.svg")
+  background-position: 0 -180px;
 }
 
 
