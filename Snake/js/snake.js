@@ -16,8 +16,9 @@
   var Snake = window.Snake.Snake = function(board, startPos) {
     this.direction = "N";
     this.segments = [];
-    startCoord = new window.Snake.Coord(startPos, this.direction);
+    var startCoord = new window.Snake.Coord(startPos, this.direction);
     this.segments.push(startCoord);
+    this.segments.unshift(this.nextCoord());
     this.board = board;
     this.appleTurns = 0;
   };
@@ -28,12 +29,10 @@
     var nextCoord = new window.Snake.Coord(this.segments[0].pos(), this.direction)
     nextCoord.plus(DELTAS[this.direction]);
     return nextCoord
-    // console.log(nextCoord.plus(DELTAS[this.direction]));
   };
 
   Snake.prototype.move = function() {
     var nextCoord = this.nextCoord();
-    // debugger
     this.checkCollision(nextCoord);
     this.appleCheck(nextCoord);
     this.segments.unshift(nextCoord);

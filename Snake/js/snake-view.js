@@ -86,12 +86,12 @@
   };
 
   View.prototype.render = function() {
-    // debugger
     var count = 0;
     for (var i = 0; i < this.board.dimX; i++) {
       for (var j = 0; j < this.board.dimY; j++) {
         var currentItem = this.board.grid[i][j];
         var $li = $("li").eq(count)
+        var snakehead = 0
         if (currentItem === "S") {
           $li.addClass("snake head-N");
         } else if (currentItem === "A") {
@@ -101,7 +101,8 @@
         }
         count++;
       }
-    };
+    }
+    this.update();
   };
 
   View.prototype.gameOver = function() {
