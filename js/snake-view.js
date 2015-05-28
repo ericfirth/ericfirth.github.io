@@ -3,6 +3,7 @@
     window.Snake = {};
   }
   var View = window.Snake.View = function($el) {
+    this.speed = 1000/5;
     this.$el = $el;
     this.$gameBoard = $(".game-board")
     this.newGame();
@@ -10,6 +11,8 @@
 
   View.prototype.newGame = function() {
     this.$gameBoard.empty()
+    // $(this.$el).off("click", this.newGame.bind(this))
+
     $(".overlay").removeClass("visible game-over paused")
     this.board = new window.Snake.Board();
     this.$ul = this.makeAndFillUl();
@@ -17,6 +20,7 @@
     this.render();
     this.step();
     $(window).on("keydown", this.handleKeyEvent.bind(this));
+    console.log(this.speed);
   }
 
 
@@ -29,7 +33,7 @@
       } else {
         this.gameOver();
       }
-    }.bind(this), 1000/10);
+    }.bind(this), this.speed);
   };
 
   View.prototype.handleKeyEvent = function(event) {
@@ -100,7 +104,7 @@
     clearInterval(this.gamePlay)
     $(".overlay").addClass("visible game-over")
     $(window).off("keydown");
-    $(this.$el).on("click", this.newGame.bind(this))
+    $(this.$el).one("click", ".game-over", this.newGame.bind(this))
 
   }
 
