@@ -1,0 +1,295 @@
+/*font-family: 'Lato', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Gentium Book Basic', serif;
+*/
+
+html, body, ul, li, span, p, div, header, h1, h2, a, svg, figure, form, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  background: #f0e5cf;
+  text-align: center;
+  padding-top: 75px;
+}
+
+header h1 {
+  width: 900px;
+  display: block;
+  margin: auto;
+  background-image: url("../images/title.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 900px 200px;
+  height: 0;
+  padding-top: 200px;
+  overflow: hidden;
+}
+
+.header-title {
+
+  font-size: 100px;
+  color: #00578d;
+}
+
+.header-image {
+  width: 900px;
+  margin: auto;
+}
+
+.lines {
+  float: left;
+  width: 330px;
+}
+
+.single-line:first-child {
+  margin-top: 75px;
+}
+
+.single-line {
+  display: block;
+  background: black;
+  height: 1px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.self-pic {
+  margin: 0 20px;
+  float: left;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.header-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 24px;
+
+  margin-top: 20px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.header-text span {
+  display: block;
+}
+
+.about-me {
+  background: #f0532d;
+  padding: 100px 0;
+}
+
+.about-me h1 {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  color: white;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.about-me p {
+  font-size: 18px;
+  width: 600px;
+  margin: auto;
+  font-family: 'Gentium Book Basic', serif;
+  margin-top: 10px;
+}
+
+.skills > h1 {
+  font-family: 'Oswald', sans-serif;
+  display: block;
+  text-align: center;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.skill-list {
+  padding-top: 30px;
+  margin: auto;
+  width: 700px;
+}
+
+.skill-list li {
+  float: left;
+  width: 100px;
+  padding-right:20px;
+}
+
+.skill-list li:last-child {
+  padding-right: 0;
+}
+
+.skill-list span {
+  display: block;
+  text-align: center;
+  // font-family: 'Lato', sans-serif;
+  // font-family: 'Gentium Book Basic', serif;
+  // font-family: 'Playfair Display', serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.skill-list:last-child {
+  margin-bottom: 30px;
+}
+
+.projects {
+  background: #3fb1e5;
+  padding: 30px 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.projects-header {
+  color: white;
+  font-weight: 100;
+  font-size: 72px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 10;
+}
+
+.project-list {
+  max-width: 850px;
+  margin: auto;
+}
+
+.project > figure {
+  float: left;
+  width: calc(50% - 30px);
+  padding: 10px;
+  border: 1px solid white;
+  position: relative;
+  margin: 20px 20px 0 0;
+}
+
+
+.project-text {
+  padding: 10px;
+}
+
+.project-title {
+  font-size: 24px;
+  color: white;
+  font-weight: 100;
+}
+
+.project-text i {
+  padding: 0 10px;
+}
+
+.project-desc {
+  list-style: inside;
+}
+
+.project-desc li:first-child {
+  list-style: none;
+  font-style: italic;
+}
+
+
+.project-links {
+  position: absolute;
+  background: rgba(255,255,255,0);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: background .5s;
+}
+
+.project-links:hover {
+  background: rgba(255,224,0,0.4)
+}
+
+.project-links a {
+  font-size: 24px;
+  text-align: center;
+  margin: 30px auto;
+  display: none;
+  padding: 10px;
+  width: 150px;
+  color: #3fb1e5;
+  font-weight: 100;
+}
+
+.project-links:hover a {
+  display: block;
+  background: black;
+}
+
+
+.contact {
+  // background: linear-gradient(to right, #f5871f, #d7418c);
+  background: #d7418c;
+  color: white;
+  padding: 30px 0;
+}
+
+.contact-pieces {
+  width: 900px;
+  margin: auto;
+}
+
+.contact-pieces > h1 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 72px;
+  text-align: center;
+  display: block;
+}
+
+.social-icons i {
+  font-size: 100px;
+}
+
+.social-icons {
+  width: 600px;
+  margin: auto;
+}
+
+.social-icons a {
+  color: inherit;
+}
+
+.social-icons > li {
+  color: white;
+  padding: 20px;
+  display: block;
+  float: left;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0);
+  overflow: hidden;
+  border-radius: 50%;
+  transition: background .5s, color .5s;
+  cursor: pointer;
+}
+
+.social-icons > li:hover {
+  background: rgba(255, 255, 255, .6);
+  color: #009748;
+}

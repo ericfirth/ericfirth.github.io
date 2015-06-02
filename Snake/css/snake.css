@@ -145,9 +145,9 @@ footer {
 }
 
 .apple-count {
-  font-family: sans-serif;
-  font-size: 60px;
-  left: 28px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 40px;
+  left: 24px;
   position: absolute;
-  top: 267px;
+  top: 285px;
 }
